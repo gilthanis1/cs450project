@@ -5,4 +5,8 @@ class UsersController < ApplicationController
 	  @user = current_user
   end
 
+  def after_update_path_for(resource)
+    current_user
+	end
+
 end
