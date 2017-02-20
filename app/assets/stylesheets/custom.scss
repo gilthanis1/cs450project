@@ -5,7 +5,22 @@
 
 body {
   padding-top: 60px;
-  background-color: lightgrey;
+  background-color: darkgrey;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.navbar-inverse {
+  .navbar-nav > li > a {
+    color: #ffffff;
+  }
+	background-color: darkred;
 }
 
 .center {
@@ -16,10 +31,70 @@ body {
   margin-bottom: 10px;
 }
 
-section {
-  overflow: auto;
+/* Font/Line Sizing and Coloring */
+
+a {
+  color: #000000;
+  text-decoration: none;
+  &:hover{
+  color: #ffffff;
+  text-decoration: none;
+  }
 }
 
-textarea {
-  resize: vertical;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #000000;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Footer Styling */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #000000;
+  color: #777;
+}
+
+footer a {
+  color: #777777;
+}
+
+footer a:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }

@@ -1,0 +1,9 @@
+<% provide(:title, "Reviews") %>
+
+<ol class="reviews">
+	<%= render @reviews %>
+</ol>
+
+<%- if user_signed_in? %>
+	<%= link_to "Write a Review", new_review_path %>
+<% end %>

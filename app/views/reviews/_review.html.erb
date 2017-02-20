@@ -1,0 +1,11 @@
+<li id="review-<%= review.id %>">
+  <span class="rev_stmnt">
+  	<%= review.rev_stmnt %><br/>
+  </span>
+  <span class="user_time"><span>Posted by: </span><%= review.user.name %>
+		<span> -- </span><%= time_ago_in_words(review.created_at) %> ago.<br />
+    <% if current_user %>
+      <%= link_to "Delete Review", review, method: :delete, data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>
