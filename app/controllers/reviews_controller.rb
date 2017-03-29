@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
 	def create
 		@review = current_user.reviews.build(review_params)
 		if @review.save
-			flash[:success] = "Review Posted"
+			flash[:notice] = "Review Posted"
 			redirect_to user_path
 		else
 			redirect_to user_path, alert: "Error Creating Review"
@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
 	def update
 		@review = current_user.reviews.find(params[:id])
 		if @review.update(review_params)
-			flash[:success] = "Review Updated"
+			flash[:notice] = "Review Updated"
 			redirect_to user_path
 		else
 			redirect_to user_path, alert: "Error Updating Review"
@@ -36,7 +36,7 @@ class ReviewsController < ApplicationController
 	def destroy
 		@review = current_user.reviews.find(params[:id])
 		if @review.destroy
-			flash[:success] = "Review Deleted"
+			flash[:notice] = "Review Deleted"
 			redirect_to user_path
 		else
 			redirect_to user_path, alert: "Error Deleting Review"
