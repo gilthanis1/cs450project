@@ -36,7 +36,6 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     user_name:      'cs450test@gmail.com',
     password:       'Test1234!',
@@ -46,6 +45,7 @@ Rails.application.configure do
     authentication: :plain,
     enable_starttls_auto: true
   }
+  config.action_mailer.default_options = { from: "cs450test@gmail.com" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
