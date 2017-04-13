@@ -2,8 +2,14 @@
   <small>
     <p align="left", class="foot_date">© <%= Date.today.year %> JR's Performance Inc</p>
   </small>
+  
   <nav>
     <ul>
+      <li>
+        <% if user_signed_in? %>
+          <%= render 'layouts/cart_text' %></p>
+        <% end %>
+      </li>
       <li><%= link_to "About",   about_path %></li>
       <li><%= link_to "Support",   help_path %></li>
       <li><%= link_to "Customer Service", contact_path %></li>
