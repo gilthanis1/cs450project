@@ -12,7 +12,7 @@ class OrderItemsController < ApplicationController
     @order_item = @order.order_items.find(params[:id])
     @order_item.update_attributes(order_item_params)
     @order_items = @order.order_items
-    order.subtotal
+    redirect_to shopping_cart_url
   end
 
   def destroy
